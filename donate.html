@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donate - Richard Willis</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+    }
+    /* Header */
+    header {
+        background: #111;
+        color: white;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 1.5rem;
+    }
+    nav a {
+        color: white;
+        margin-left: 15px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    nav a:hover {
+        text-decoration: underline;
+    }
+    /* Donation Box */
+    .container {
+        text-align: center;
+        padding: 40px 20px;
+    }
+    .donation-box {
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        display: inline-block;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        max-width: 400px;
+        width: 100%;
+    }
+    h2 {
+        color: #333;
+        margin-top: 0;
+    }
+    select, input {
+        width: 90%;
+        padding: 10px;
+        margin: 10px 0;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .btn-donate {
+        background: crimson;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .btn-donate:hover {
+        background: darkred;
+    }
+    /* Footer */
+    footer {
+        background: #111;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+    }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Richard Willis</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="donate.html">Donation</a>
+  </nav>
+</header>
+
+<div class="container">
+    <div class="donation-box">
+        <h2>Make a Donation</h2>
+        <form action="https://www.paypal.com/donate" method="post" target="_blank">
+            <!-- PayPal Business Email -->
+            <input type="hidden" name="business" value="jacob4don@yahoo.com">
+            
+            <!-- Donation Purpose -->
+            <label for="program">Select Donation Program:</label>
+            <select id="program" name="item_name" required>
+                <option value="">-- Choose Program --</option>
+                <option value="Less Privileged">Less Privileged</option>
+                <option value="Drug Abuse Awareness">Drug Abuse Awareness</option>
+                <option value="Health Support">Health Support</option>
+                <option value="Education Support">Education Support</option>
+                <option value="Disaster Relief">Disaster Relief</option>
+                <option value="Community Development">Community Development</option>
+            </select>
+
+            <!-- Currency -->
+            <input type="hidden" name="currency_code" value="USD">
+
+            <!-- Donation Amount -->
+            <label for="amount">Donation Amount (USD):</label>
+            <input type="number" step="0.01" min="1" name="amount" id="amount" placeholder="Enter amount" required>
+
+            <!-- Submit Button -->
+            <br>
+            <button type="submit" class="btn-donate">Donate with PayPal</button>
+        </form>
+    </div>
+</div>
+
+<footer>
+  &copy; 2025 Richard Willis | All Rights Reserved
+</footer>
+
+</body>
+</html>
